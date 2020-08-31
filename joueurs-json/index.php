@@ -1,39 +1,27 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "root", "xfilespayers"); 
-$query = '';
-$table_data = '';
-$filename = "players.json";
-$data = file_get_contents($filename); 
-$array = json_decode($data, true);
-foreach($array as $row) 
-{
- $query .= "INSERT INTO players(pseudo, xp, urlavatar) VALUES ('".$row["pseudo"]."', '".$row["xp"]."', '".$row["urlavatar"]."'); "; 
- $table_data .= '
-  <tr>
-<td>'.$row["pseudo"].'</td>
-<td>'.$row["xp"].'</td>
-<td>'.$row["urlavatar"].'</td>
-</tr>
- '; 
-}
-if(mysqli_multi_query($connect, $query)) 
-{
-echo '<h3> JSON Data importé</h3><br />';
-echo '
-<table class="table table-bordered">
-<tr>
-<th width="45%">Pseudo</th>
-<th width="10%">Xp</th>
-<th width="45%">UrlAvatar</th>
-</tr>
-';
-echo $table_data;  
-echo '</table>';
+$host = "localhost"; $db_name = "xfilespayers"; $username = "root"; $password = "root";
+
+try {
+    $conn = new PDO("mysql:host=".$host.";dbname=".$db_name, $username, $password);
+} catch (PDOException $e) {
+    echo 'Connection failed: ' . $e->getMessage();
 }
 
+$json = file_get_contents('json/players.json');
+$obj = json_decode($json, TRUE);
 
+$stmt = $conn->prepare("INSERT INTO players (players_id,value,pseudo) VALUES (:players_id,:value,:xp");
 
+foreach($obj['players'] as $key => $index) {
+    $players_id = $key;
+    $pseudo = $index['pseudo'];
+    $xp = $index['xp'];
 
+    $stmt->bindparam(":players_id", $item_id);
+    $stmt->bindparam(":pseudo", $pseudo);
+    $stmt->bindparam(":xp", $xp); 
+    $stmt->execute();
+}
 ?>
 
 
