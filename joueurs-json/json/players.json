@@ -1,39 +1,41 @@
 
-{
-    "players": [{
-
-            "Name": "Dana Scully",
-            "Xp": "30",
-            "Image": "/img/danascully.jpg"
+        [{
+            "pseudo" : "Dana Scully",
+            "xp": "30",
+            "urlavatar": "https://resize-parismatch.lanmedia.fr/r/,600,forcey/img/var/news/storage/images/paris-match/culture/medias/l-evolution-physique-des-stars-de-x-files-901177/gillian-anderson-dana-scully2/9555361-1-fre-FR/Gillian-Anderson-Dana-Scully.jpg"
             
         },
         {
 
-            "Name": "Fox Mulder",
-            "Xp": "20",
-            "Image": "/img/foxmulder.jpg"
+            "pseudo": "Fox Mulder",
+            "xp": "20",
+            "urlavatar": "https://i.pinimg.com/originals/bd/e0/85/bde085788fbd54c31582051012b3b8be.jpg"
             
         },
         {
 
-            "Name": "L'homme à la cigarette",
-            "Xp": "10",
-            "Image": "/img/lhommecigarette.jpg"
+            
+            "pseudo": "L'homme à la cigarette",
+            "xp": "10",
+            "urlavatar": "data:image/jpeg;base64,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"
             
         },
         {
 
-            "Name": "The Peacock Family",
-            "Xp": "20",
-            "Image": "/img/peacockfamily.jpg"
+            
+            "pseudo": "The Peacock Family",
+            "xp": "20",
+            "urlavatar": "https://vignette.wikia.nocookie.net/villains/images/9/95/The_Peacock_Family.jpg/revision/latest/top-crop/width/360/height/450?cb=20180302190006"
         
         },
         {
 
-            "Name": "The Flukeman",
-            "Xp": "5",
-            "Image": "/img/theflukeman.jpg"
+          
+            "pseudo": "The Flukeman",
+            "xp": "5",
+            "urlavatar": "https://upload.wikimedia.org/wikipedia/en/3/33/Thehost.jpg"
             
         }
     ]
-}
+
+
