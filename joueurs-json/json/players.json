@@ -1,0 +1,39 @@
+
+{
+    "players": [{
+
+            "Name": "Dana Scully",
+            "Xp": "30",
+            "Image": "/img/danascully.jpg"
+            
+        },
+        {
+
+            "Name": "Fox Mulder",
+            "Xp": "20",
+            "Image": "/img/foxmulder.jpg"
+            
+        },
+        {
+
+            "Name": "L'homme à la cigarette",
+            "Xp": "10",
+            "Image": "/img/lhommecigarette.jpg"
+            
+        },
+        {
+
+            "Name": "The Peacock Family",
+            "Xp": "20",
+            "Image": "/img/peacockfamily.jpg"
+        
+        },
+        {
+
+            "Name": "The Flukeman",
+            "Xp": "5",
+            "Image": "/img/theflukeman.jpg"
+            
+        }
+    ]
+}
